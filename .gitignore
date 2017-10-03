@@ -1,52 +1,49 @@
-# Prerequisites
-*.d
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-# Object files
-*.o
-*.ko
-*.obj
-*.elf
+namespace exercicio
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int num=0, num1=0, num2=0, penNum=0, ultNum=0, x;
+            Console.WriteLine("Digite um numero entre 10000 e 99999: ");
+            num = int.Parse(Console.ReadLine());
+            for (x = 1; x <= 10; x++)
+            {
+                
+                if (num > 10000 && num <= 99999)
+                {
+                
+                    if (num1 == ultNum && num2 == penNum)
+                    {
+                        Console.WriteLine("É palíndromo");
+                        int cont = 0;
+                        for (int n = 0; n <= num; n++)
+                        {
+                            if(n % 2 != 0)
+                {
+                                cont = cont + 1; 
+                            }
+                        }
+                        Console.WriteLine("Possui {0} números ímpares", cont);
+                    }
+                    else
+                    {
+                        Console.WriteLine("Não é palíndromo");
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("SINTAX ERROR");
+                }
 
-# Linker output
-*.ilk
-*.map
-*.exp
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
-
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
-
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
-
-# Debug files
-*.dSYM/
-*.su
-*.idb
-*.pdb
-
-# Kernel Module Compile Results
-*.mod*
-*.cmd
-.tmp_versions/
-modules.order
-Module.symvers
-Mkfile.old
-dkms.conf
+                Console.ReadKey();
+            }
+        }
+    }
+}
